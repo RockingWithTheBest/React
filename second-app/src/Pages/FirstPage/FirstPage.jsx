@@ -9,6 +9,11 @@ import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 import styled from '@emotion/styled';
 import TextField from '@mui/material/TextField';
+import InputLabel from '@mui/material/InputLabel';
+import MenuItem from '@mui/material/MenuItem';
+import Select from '@mui/material/Select';
+import Fab from '@mui/material/Fab';
+
 
 const FirstPage = () => {
     const [products, setProducts] = useState(productsData);
@@ -86,6 +91,11 @@ const FirstPage = () => {
     color: rgb(37 32 32);
     background-color: rgb(127, 255, 0);
     }`
+
+
+
+
+
     return (    
             <div>
              <div className = "products">
@@ -134,14 +144,27 @@ const FirstPage = () => {
             </div>
             <div className="productAdded">
                 <Popup trigger=
-                    {<ButtonAdd >Add New Product</ButtonAdd>} modal nested>{
+                    {<Fab variant="extended"> Add New Product </Fab>} modal nested>
+                        {
                         close=>(
                             <div className="modal">
                                 <div className="content">
+                                <InputLabel id="demo-simple-select-label">Title</InputLabel>
+                                <Select
+                                    labelId="demo-simple-select-label"
+                                    id="demo-simple-select"
+                                    value={title}  
+                                    label="Title"
+                                    onChange={(e)=>{setTitle(e.target.value)}}
+                                 
+                                    >
+                                    <MenuItem value={"LongAcres"}>LongAcres</MenuItem>
+                                    <MenuItem value={"MeanHood"}>MeanHood</MenuItem>
+                                    <MenuItem value={"Avondale"}>Avondale</MenuItem>
+                                </Select>
                                
-                                <TextField id="standard-basic" label="Title" variant="standard"  value={title}        onChange={(e)=>{setTitle(e.target.value)}} />
-                                <TextField id="standard-basic" label="Description" variant="standard" value ={descript}    onChange={(e)=>{setDescription(e.target.value)}} />
-                                <TextField id="standard-basic" label="Title" variant="standard"   value = {price}      onChange={(e)=>{setPrice(e.target.value)}}/>
+                                <TextField id="standard-basic" label="Description" variant="outlined" value ={descript}    onChange={(e)=>{setDescription(e.target.value)}} />
+                                <TextField id="standard-basic" label="Price" variant="outlined"  type="number" value = {price}      onChange={(e)=>{setPrice(e.target.value)}}/>
                                 {/* <label htmlFor="">Price</label><input type="number"       value = {price}      onChange={(e)=>{setPrice(e.target.value)}}/> */}
                                 </div>
                                 <div>
