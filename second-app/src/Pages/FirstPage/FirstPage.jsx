@@ -3,6 +3,12 @@ import productsData from '../../assets/products'
 import { useState } from 'react';
 import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
+import '@fontsource/roboto/300.css';
+import '@fontsource/roboto/400.css';
+import '@fontsource/roboto/500.css';
+import '@fontsource/roboto/700.css';
+import styled from '@emotion/styled';
+
 
 const FirstPage = () => {
     const [products, setProducts] = useState(productsData);
@@ -51,7 +57,35 @@ const FirstPage = () => {
         setTitle('');
         console.log('added products', products);
     };
-  
+    
+    const ButtonDelete = styled.button`
+    background-color: #blue;
+    padding: 5px;
+    font-size:18px;
+    border-radius: 4px;
+    &:hover{
+    color: white;
+    background-color: rgb(183 42 70);
+    }`
+
+    const ButtonEdit = styled.button`
+    background-color: rgb(240, 255, 255) ;
+    padding: 5px;
+    font-size:18px;
+    border-radius: 4px;
+    &:hover{
+    color: rgb(37 32 32);
+    background-color: #3040ab;
+    }`
+
+    const ButtonAdd = styled.button`
+    padding: 5px;
+    font-size:18px;
+    border-radius: 4px;
+    &:hover{
+    color: rgb(37 32 32);
+    background-color: rgb(127, 255, 0);
+    }`
     return (    
             <div>
              <div className = "products">
@@ -66,10 +100,10 @@ const FirstPage = () => {
                                 <span>&euro;</span>
                             </p>
                             <p className = "cart">Add to Cart <i className = "bx bx-cart-alt"></i></p>
-                            <button className="btn" onClick = {()=>deleteProducts(index)}>
+                            <ButtonDelete className="btn" onClick = {()=>deleteProducts(index)}>
                                 Delet Product
-                            </button>
-                            <Popup trigger = {<button className="modal" onClick = {()=> editProducts(index)}>Edit Modul</button>} modal nested>
+                            </ButtonDelete>
+                            <Popup trigger = {<ButtonEdit className="modal" onClick = {()=> editProducts(index)}>Edit Modul</ButtonEdit>} modal nested>
                                 {
                                     close =>(
                                         <div className="modal">
@@ -82,10 +116,10 @@ const FirstPage = () => {
                                                 </p>
                                                <label htmlFor="">New Price</label><input type="number" className = "NewPrice" value = {newPrice} onChange={(e)=>{setNewPrice(e.target.value)}}/>
                                                 <div>
-                                                    <button className="btn" onClick = {()=>handleEdit(index)}>
+                                                    <ButtonDelete className="btn" onClick = {()=>handleEdit(index)}>
                                                         Edit Products
-                                                    </button>
-                                                    <button onClick = {() => close()}>Modal</button>
+                                                    </ButtonDelete>
+                                                    <ButtonDelete onClick = {() => close()}>Modal</ButtonDelete>
                                                 </div>
                                                 
                                         </div>
@@ -100,7 +134,7 @@ const FirstPage = () => {
             </div>
             <div className="productAdded">
                 <Popup trigger=
-                    {<button >Add New Product</button>} modal nested>{
+                    {<ButtonAdd >Add New Product</ButtonAdd>} modal nested>{
                         close=>(
                             <div className="modal">
                                 <div className="content">
