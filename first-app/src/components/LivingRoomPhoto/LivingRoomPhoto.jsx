@@ -6,13 +6,12 @@ const  LivingRoom= {
     name : 'LivingRoom',
     imageUrl: livingRoom
   }
-class LivingRoomPhoto extends React.Component{
-    render() {
+
+  const LivingRoomPhoto =()=>{
       return (
         <div className="livingroomphoto">
           <img src = {LivingRoom.imageUrl} />
       </div>
       )
-    }
   }
   export default LivingRoomPhoto;

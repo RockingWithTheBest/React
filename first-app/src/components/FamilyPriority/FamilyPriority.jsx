@@ -7,9 +7,8 @@ const  FamilyRestRoom= {
     name : 'RestRoom',
     imageUrl: restRoom
   }
-  
-class FamilyPriority extends React.Component {
-    render() {
+
+  const FamilyPriority =()=> {
       return(
         <div className ="Wrapper6">
         <div className="Wrapper7">
@@ -23,7 +22,6 @@ class FamilyPriority extends React.Component {
         </div>
    </div>
       )
-    }
   }
 
   export default FamilyPriority;

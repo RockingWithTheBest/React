@@ -9,8 +9,8 @@ const footerLogo = {
   name: "Logo",
   imageUrl: logo
 }
-class Footer extends React.PureComponent {
-    render() {
+const Footer =()=>
+   {
       return(
         <div className="Wrapper10">
           <div className="companyreal"><img src={footerLogo.imageUrl} />Realco</div>
@@ -52,7 +52,6 @@ class Footer extends React.PureComponent {
           </div>
       </div>
       )
-    }
   }
 
   export default Footer;
