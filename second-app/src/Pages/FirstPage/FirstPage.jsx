@@ -8,7 +8,7 @@ import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 import styled from '@emotion/styled';
-
+import TextField from '@mui/material/TextField';
 
 const FirstPage = () => {
     const [products, setProducts] = useState(productsData);
@@ -114,7 +114,7 @@ const FirstPage = () => {
                                                     <span>Price: ${products[index].price}</span>
                                                     <span>&euro;</span>
                                                 </p>
-                                               <label htmlFor="">New Price</label><input type="number" className = "NewPrice" value = {newPrice} onChange={(e)=>{setNewPrice(e.target.value)}}/>
+                                                <TextField id="standard-basic" label="New Price" variant="standard"  type="number" value={newPrice}   onChange={(e)=>{setNewPrice(e.target.value)}} />
                                                 <div>
                                                     <ButtonDelete className="btn" onClick = {()=>handleEdit(index)}>
                                                         Edit Products
@@ -138,9 +138,11 @@ const FirstPage = () => {
                         close=>(
                             <div className="modal">
                                 <div className="content">
-                                <label htmlFor="">Title</label><input type="text"       value={title}        onChange={(e)=>{setTitle(e.target.value)}} />
-                                <label htmlFor="">Description</label><input type="text" value ={descript}    onChange={(e)=>{setDescription(e.target.value)}}/>
-                                <label htmlFor="">Price</label><input type="number"       value = {price}      onChange={(e)=>{setPrice(e.target.value)}}/>
+                               
+                                <TextField id="standard-basic" label="Title" variant="standard"  value={title}        onChange={(e)=>{setTitle(e.target.value)}} />
+                                <TextField id="standard-basic" label="Description" variant="standard" value ={descript}    onChange={(e)=>{setDescription(e.target.value)}} />
+                                <TextField id="standard-basic" label="Title" variant="standard"   value = {price}      onChange={(e)=>{setPrice(e.target.value)}}/>
+                                {/* <label htmlFor="">Price</label><input type="number"       value = {price}      onChange={(e)=>{setPrice(e.target.value)}}/> */}
                                 </div>
                                 <div>
                                     <button className="add" onClick = {()=>AddedOBject()}>
