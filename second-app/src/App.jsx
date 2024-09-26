@@ -14,7 +14,7 @@ function App() {
         <Routes>
           <Route path='firstPage' element={<FirstPage/>}></Route>
           <Route path='secondPage' element={<SecondsPage/>}></Route>
-          
+          <Route path='thirdPage' element={<ThirdPage/>}></Route>
         </Routes>
       </BrowserRouter>
     </>
