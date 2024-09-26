@@ -13,6 +13,8 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path='firstPage' element={<FirstPage/>}></Route>
+          <Route path='secondPage' element={<SecondsPage/>}></Route>
+          
         </Routes>
       </BrowserRouter>
     </>
