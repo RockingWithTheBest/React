@@ -4,14 +4,12 @@ import FirstSearchPhoto from './FirstSearchPhoto/FirstSearchPhoto';
 import Footer from './Footer/Footer';
 import LivingRoomPhoto from './LivingRoomPhoto/LivingRoomPhoto';
 import FamilyPriority from './FamilyPriority/FamilyPriority';
-
+import Body from '../Body/Body';
 
 
 
 const FourthPage = ()=>
    {
-
-    
     return (
     <div>
       <div className="WrapperOneThird">
@@ -21,8 +19,9 @@ const FourthPage = ()=>
           </div>  
           <LivingRoomPhoto/>
       </div>
-      <FamilyPriority /> 
-      <Footer/>
+       <Body />
+        <FamilyPriority /> 
+        <Footer/>
     </div>
       
     )

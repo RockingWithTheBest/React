@@ -1,16 +1,10 @@
 import React from 'react';
-import SubscribeBtn from '../SubscribeBtn/SubscribeBtn';
-import EmailBtn from '../EmailBtn/EmailBtn';
-import logo from "./Pictures/logo.png";
 import './styling.css';
 import './Footer.css';
 import Rating from '@mui/material/Rating';
 import Typography from '@mui/material/Typography';
 
-const footerLogo = {
-  name: "Logo",
-  imageUrl: logo
-}
+
 const Footer = () => {
   const [value, setValue] = React.useState(2);
   return (
