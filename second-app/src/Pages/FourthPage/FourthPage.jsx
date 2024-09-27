@@ -6,8 +6,12 @@ import LivingRoomPhoto from './LivingRoomPhoto/LivingRoomPhoto';
 import FamilyPriority from './FamilyPriority/FamilyPriority';
 
 
+
+
 const FourthPage = ()=>
    {
+
+    
     return (
     <div>
       <div className="WrapperOneThird">

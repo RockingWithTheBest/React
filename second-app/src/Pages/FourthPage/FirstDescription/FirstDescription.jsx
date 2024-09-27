@@ -1,9 +1,7 @@
 import React from 'react';
 import './styling.css';
 
-
-class FirstDescription extends React.Component {
-    render() {
+const FirstDescription =()=>{
       return (
         <div className = "detailsW31">
           <span className = "dreamplace">Find your dream place</span>               
@@ -14,7 +12,6 @@ class FirstDescription extends React.Component {
           </p>
         </div>
       )
-    }
   }
 
   export default FirstDescription;

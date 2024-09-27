@@ -94,8 +94,6 @@ const FirstPage = () => {
 
 
 
-
-
     return (    
             <div>
              <div className = "products">

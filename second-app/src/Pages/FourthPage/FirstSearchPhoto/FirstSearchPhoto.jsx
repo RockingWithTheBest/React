@@ -7,9 +7,7 @@ const searchIcon = {
     name: "Seacrh",
     imageUrl: searchImage
   }
-
-  class FirstSearchPhoto extends React.Component {
-    render() {
+const FirstSearchPhoto =()=> {
       return (
         <div className="detailsW32">
                 <div className="searchbar">
@@ -19,7 +17,6 @@ const searchIcon = {
                 <button className ="findproperty">Find property</button>
          </div>
       )
-    }
   }
 
   export default FirstSearchPhoto;
