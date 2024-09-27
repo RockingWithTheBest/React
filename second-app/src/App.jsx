@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from'react-router-dom'
 import './App.css'
 import SecondsPage from './Pages/SecondPage/SecondPage'
 import ThirdPage from './Pages/ThirdPage/ThirdPage'
+import FourthPage from './Pages/FourthPage/FourthPage'
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path='firstPage' element={<FirstPage/>}></Route>
           <Route path='secondPage' element={<SecondsPage/>}></Route>
           <Route path='thirdPage' element={<ThirdPage/>}></Route>
+          <Route path='fourthPage' element={<FourthPage/>}></Route>
         </Routes>
       </BrowserRouter>
     </>
