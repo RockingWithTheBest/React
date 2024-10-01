@@ -101,7 +101,7 @@ const FirstPage = () => {
                 {products.map((product,index) => {
                     return (
                         <div className="product" key={product.id}>
-                            <img src={product.image} alt=""/>
+                            <img src={product.url} alt=""/>
                             <p className  = "title">{product.title}</p>
                             <p className  = "description">${product.description}</p>
                             <p className = "price">
