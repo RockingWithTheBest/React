@@ -946,7 +946,7 @@ p.priority {
     font-family: Roboto;
     font-weight: bold;
 }
-p.Morbii, . {
+p.Morbii {
     color: #E7E8E3;
     font-size: 18px;
     font-family: Roboto;
@@ -960,7 +960,7 @@ button.getstarted {
     border-radius: 4px;
     padding-bottom: 13px;
     position: relative;
-    top: -5px;
+    top: 6px;
     padding-top: 13px;
     padding-right: 26px;
     padding-left: 26px;
@@ -976,13 +976,16 @@ div .family_restroom {
 div .priority {
     margin-top: 9px;
 }
+div span.MorbiiTWO{
+    margin-top: 10px;
+}
 p.Morbii, span.MorbiiTWO {
     color: #E7E8E3;
     font-size: 18px;
     font-family: Roboto;
 }
 div .Morbii {
-    margin-top: -16px;
+    margin-top: -2px;
 }
 span.MorbiiTWO {
     position: relative;

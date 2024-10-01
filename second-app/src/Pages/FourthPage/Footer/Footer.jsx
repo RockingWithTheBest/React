@@ -1,5 +1,4 @@
 import React from 'react';
-import './Footer2.css';
 import './Footer.css';
 import Rating from '@mui/material/Rating';
 import Typography from '@mui/material/Typography';
