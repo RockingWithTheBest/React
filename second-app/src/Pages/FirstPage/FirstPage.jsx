@@ -15,6 +15,7 @@ import Select from '@mui/material/Select';
 import Fab from '@mui/material/Fab';
 
 
+
 const FirstPage = () => {
     const [products, setProducts] = useState(productsData);
     const [newPrice,setNewPrice] = useState('');
@@ -54,7 +55,7 @@ const FirstPage = () => {
             image: 'https://via.placeholder.com/150',
             title:title,
             description:descript,
-            price: price      
+            price: price    
         }
         setProducts([...products, newProduct]);
         setDescription('');
@@ -142,7 +143,7 @@ const FirstPage = () => {
             </div>
             <div className="productAdded">
                 <Popup trigger=
-                    {<Fab variant="extended"> Add New Product </Fab>} modal nested>
+                    {<Fab variant="extended" className = "AddNewProduct"> Add New Product </Fab>} modal nested>
                         {
                         close=>(
                             <div className="modal">
