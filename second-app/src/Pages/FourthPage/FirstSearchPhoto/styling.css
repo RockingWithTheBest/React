@@ -195,6 +195,7 @@ p.lorem {
     position: relative;
     left: -17px;
     top: 8px;
+    padding-top: 11px;
 }
 .searchbar img {
     padding-left: 16px;
