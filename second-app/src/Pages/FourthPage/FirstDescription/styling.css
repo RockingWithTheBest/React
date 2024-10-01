@@ -185,34 +185,7 @@ p.lorem {
     display: flex;
     margin-left: 96px;
 }
-.searchbar {
-    width: 304px;
-    border: 2px solid #FFFFFF;
-    background: #FFFFFF;
-    border-radius: 6px;
-    height: 44px;
-    border-radius: 6px;
-    position: relative;
-    left: -17px;
-    top: 8px;
-}
-.searchbar img {
-    padding-left: 16px;
-    padding-top: 16px;
-    height: 18px;
-    width: 18px;
-    position: relative;
-    top: -3px;
-}
-.searchbar span {
-    font-family: Roboto;
-    margin-left: 10px;
-    font-size: 20px;
-    color: #65665C;
-    position: relative;
-    top: -5px;
-    left: 10px;
-}
+
 button.findproperty {
     border-radius: 6px;
     width: 154px;
@@ -2022,12 +1995,7 @@ img.linked {
         position: relative;
         left: -159px;
     }
-    .searchbar {
-        width: 145px;
-        height: 39px;
-        position: relative;
-        left: -71px;
-    }
+   
     button.findproperty {
         width: 115px;
         height: 43px;
@@ -2323,29 +2291,7 @@ img.linked {
         position: relative;
         left: 0px;
     }
-    .searchbar img {
-        padding-left: 3px;
-        padding-top: 11px;
-        height: 11px;
-        width: 11px;
-        position: relative;
-        top: -3px;
-    }
-    .searchbar span {
-        font-family: Roboto;
-        margin-left: -2px;
-        font-size: 14px;
-        color: #65665C;
-        position: relative;
-        top: -5px;
-        left: 10px;
-    }
-    .searchbar {
-        width: 75px;
-        height: 24px;
-        position: relative;
-        left: -71px;
-    }
+ 
     button.findproperty {
         width: 83px;
         height: 28px;
