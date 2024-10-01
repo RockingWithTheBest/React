@@ -1,5 +1,5 @@
 import React from 'react';
-import './styling.css';
+import './GetStartedBtn.css';
 
 class GetStartedBtn extends React.Component{
     render() {

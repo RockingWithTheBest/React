@@ -1,7 +1,7 @@
 import React from 'react';
 import restRoom from "./Pictures/family_restroom.png";
 import GetStartedBtn from '../GetStartedBtn/GetStartedBtn';
-import './styling.css';
+import './FamilyPriority.css';
 
 const  FamilyRestRoom= {
     name : 'RestRoom',

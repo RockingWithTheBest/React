@@ -1,5 +1,5 @@
 import React from 'react';
-import './styling.css';
+import './SubscribeBtn.css';
 
 class SubscribeBtn extends React.Component {
     render() {

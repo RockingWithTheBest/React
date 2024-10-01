@@ -1,6 +1,6 @@
 
 import React from 'react';
-import './styling.css';
+import './Email.css';
 
 
 class EmailBtn extends React.Component {

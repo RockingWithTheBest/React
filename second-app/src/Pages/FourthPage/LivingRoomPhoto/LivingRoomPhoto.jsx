@@ -1,5 +1,5 @@
 import React from 'react';
-import './styling.css';
+import './LivingRoomPhoto.css';
 import livingRoom from "./Pictures/livingroom.png";
 
 const  LivingRoom= {
