@@ -1,0 +1,38 @@
+[
+    {
+        "id":1,
+        "name":"Dell Inspiron 16 7610 i7",
+        "description":"16GB RAM 1TB SSD",
+        "code":"134523",
+        "category":"Computer & Tablets",
+        "brand":"DELL",
+        "Remainder":"12pcs"
+    },
+    {
+        "id":2,
+        "name":"Apple MacBook Pro 13-inch",
+        "description":"M1 Chip/8GB 8-Cope GPU",
+        "code":"145363",
+        "category":"Computer & Tablets",
+        "brand":"Apple",
+        "Remainder":"20pcs"
+    },
+    {
+        "id":3,
+        "name":"Song PlayStation 5 DISC Edition",
+        "description":"New Horizon/CUISTA",
+        "code":"516743",
+        "category":"Video Game Console",
+        "brand":"Sony",
+        "Remainder":"14pcs"
+    },
+    {
+        "id":4,
+        "name":"Apple MacBook Air 13.3",
+        "description":"256GB SSD, Apple M1",
+        "code":"145363",
+        "category":"Computer & Tablets",
+        "brand":"Apple",
+        "Remainder":"17pcs"
+    }
+]
