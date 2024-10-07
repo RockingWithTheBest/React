@@ -13,7 +13,7 @@ import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import Select from '@mui/material/Select';
 import Fab from '@mui/material/Fab';
-
+import Button from '@mui/material/Button';
 
 
 const FirstPage = () => {
@@ -109,10 +109,10 @@ const FirstPage = () => {
                                 <span>&euro;</span>
                             </p>
                             <p className = "cart">Add to Cart <i className = "bx bx-cart-alt"></i></p>
-                            <ButtonDelete className="btn" onClick = {()=>deleteProducts(index)}>
+                            <Button variant="contained" className="btn" onClick = {()=>deleteProducts(index)}>
                                 Delet Product
-                            </ButtonDelete>
-                            <Popup trigger = {<ButtonEdit className="modal" onClick = {()=> editProducts(index)}>Edit Modul</ButtonEdit>} modal nested>
+                            </Button>
+                            <Popup trigger = {<Button variant="outlined" className="modal" onClick = {()=> editProducts(index)}>Edit Modul</Button>} modal nested>
                                 {
                                     close =>(
                                         <div className="modal">
@@ -125,10 +125,10 @@ const FirstPage = () => {
                                                 </p>
                                                 <TextField id="standard-basic" label="New Price" variant="standard"  type="number" value={newPrice}   onChange={(e)=>{setNewPrice(e.target.value)}} />
                                                 <div>
-                                                    <ButtonDelete className="btn" onClick = {()=>handleEdit(index)}>
+                                                    <Button variant="contained" color="success" onClick = {()=>handleEdit(index)}>
                                                         Edit Products
-                                                    </ButtonDelete>
-                                                    <ButtonDelete onClick = {() => close()}>Modal</ButtonDelete>
+                                                    </Button>
+                                                    <Button variant="outlined" color="error" onClick = {() => close()}>Close</Button>
                                                 </div>
                                                 
                                         </div>
@@ -167,9 +167,9 @@ const FirstPage = () => {
                                 {/* <label htmlFor="">Price</label><input type="number"       value = {price}      onChange={(e)=>{setPrice(e.target.value)}}/> */}
                                 </div>
                                 <div>
-                                    <button className="add" onClick = {()=>AddedOBject()}>
-                                        Add Product</button>
-                                    <button onClick = {()=>close()}>close modal</button>
+                                    <Button variant="contained" color="success" className="add" onClick = {()=>AddedOBject()}>
+                                        Add Product</Button>
+                                    <Button variant="outlined" color="error" onClick = {()=>close()}>close modal</Button>
                                 </div>
                             </div>
                         )
