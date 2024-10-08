@@ -1,9 +1,12 @@
 import React from 'react';
 import {addProduct} from '../../reducer/reducer';
 import { useDispatch } from 'react-redux';
-import { useState } from 'react';
-import {useSelector} from "react-redux";
-import {useNavigate} from 'react-router-dom'
+import { useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
+import {useState} from 'react';
+import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
+
 
 const Create =()=>{
     const [description, setDescription] = useState('');
@@ -13,40 +16,54 @@ const Create =()=>{
     const [remainder, setRemainder] = useState('');
     const users = useSelector((state)=> state.users);
     const dispatch = useDispatch();
-    const navigate = useNavigate();
+    const navigate = useNavigate();  
+    
     const handleSubmit = (e) => {
         e.preventDefault();
-        dispatch(addProduct({id : users[users.length-1].id+1 , description, code, catergory, brand, remainder}));
-        navigate('/');
+        dispatch(addProduct({id : users[users.length-1].id+1 , description, code, catergory, brand, remainder}))
+        navigate('/');  
     }
 
     return (
         <div className =  'd-flex w-100 vh-100 justify-content-center align-items-center'>
             <div className="w-50 border bg-secondary text-white p-5">
-                <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit}>
                 <h1>Create a new post</h1>
                     <div>
-                        <label htmlFor="name">Description:</label>
-                        <input type="text" name="description" className="form-control"  onChange={(e)=>{setDescription(e.target.value)}}/>
+                        <TextField id="filled-multiline-flexible"  
+                        label="Description"  multiline maxRows={4} 
+                        variant="filled" type="text" name="description" 
+                        className="form-control"  
+                        onChange={(e)=>{setDescription(e.target.value)}}/>
                     </div>
                     <div>
-                        <label htmlFor="name">Code:</label>
-                        <input type="text" name="code" className="form-control" onChange={(e)=>{setCode(e.target.value)}}/>
+                        <TextField htmlFor="name" 
+                        id="filled-multiline-flexible"  label="Code"  
+                        multiline maxRows={4} variant="filled" 
+                        type="text" name="code" className="form-control" 
+                        onChange={(e)=>{setCode(e.target.value)}}/>
                     </div>
                     <div>
-                        <label htmlFor="name">Catergory:</label>
-                        <input type="text" name="catergory" className="form-control" onChange={(e)=>{setCatergory(e.target.value)}}/>
+                        <TextField htmlFor="name" id="filled-multiline-flexible"  
+                        label="Catergory"  multiline maxRows={4} variant="filled"
+                        type="text" name="catergory" className="form-control" 
+                        onChange={(e)=>{setCatergory(e.target.value)}}/>
                     </div>
                     <div>
-                        <label htmlFor="name">Brand:</label>
-                        <input type="text" name="brand" className="form-control" onChange={(e)=>{setBrand(e.target.value)}}/>
+                        <TextField htmlFor="name" id="filled-multiline-flexible"  
+                        label="Brand"  multiline maxRows={4} variant="filled" 
+                        type="text" name="brand" className="form-control" 
+                        onChange={(e)=>{setBrand(e.target.value)}}/>
                     </div>
                     <div>
-                        <label htmlFor="name">Remainder:</label>
-                        <input type="text" name="remainder" className="form-control" onChange={(e)=>{setRemainder(e.target.value)}}/>
+                        <TextField htmlFor="name" id="filled-multiline-flexible"  
+                        label="Remainder"  multiline maxRows={4} variant="filled" 
+                        type="text" name="remainder" className="form-control" 
+                        onChange={(e)=>{setRemainder(e.target.value)}}/>
                     </div>
-                    
-                    <button className='btn btn-info'>Submit</button>
+                    <button>Submit</button>
+               
+
                 </form>
             </div>
          
