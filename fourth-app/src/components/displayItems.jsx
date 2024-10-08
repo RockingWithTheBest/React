@@ -1,5 +1,6 @@
 import React from "react";
 import {useSelector} from "react-redux";
+import {useDispatch} from "react-redux";
 import { styled } from '@mui/material/styles';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
@@ -9,6 +10,7 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import {Link} from 'react-router-dom'
+import {deleteProduct} from './../reducer/reducer';
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
@@ -33,7 +35,10 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
 
 const DisplayItems = ()=>{
     const users = useSelector((state)=> state.users);
-    console.log(users);
+    const dispatch = useDispatch();
+    const handleDelete=(id)=>{ 
+      dispatch(deleteProduct({id: id}));
+    };
     return(
         <div className="container">
               <h1>RockinWithThBest CRUD App</h1>
@@ -52,7 +57,7 @@ const DisplayItems = ()=>{
           </TableRow>
         </TableHead>
         <TableBody>
-          {users.map((user) => (
+          {users.map((user, index) => (
             <StyledTableRow >
               <StyledTableCell component="th" scope="row">{user.id}</StyledTableCell>
               <StyledTableCell align="right">{user.description}</StyledTableCell>
@@ -62,7 +67,7 @@ const DisplayItems = ()=>{
               <StyledTableCell align="right">{user.Remainder}</StyledTableCell>
               <StyledTableCell align="right">
                 <Link to ={`/edit/${user.id}`}>Edit</Link>
-                <button>Delete</button>
+                <button onClick={()=>handleDelete(user.id)}>Delete</button>
               </StyledTableCell>
             </StyledTableRow>
           ))}
