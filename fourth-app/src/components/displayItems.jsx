@@ -60,7 +60,10 @@ const DisplayItems = ()=>{
               <StyledTableCell align="right">{user.category}</StyledTableCell>
               <StyledTableCell align="right">{user.brand}</StyledTableCell>
               <StyledTableCell align="right">{user.Remainder}</StyledTableCell>
-              <StyledTableCell align="right"><button>Edit</button><button>Delete</button></StyledTableCell>
+              <StyledTableCell align="right">
+                <Link to ={`/edit/${user.id}`}>Edit</Link>
+                <button>Delete</button>
+              </StyledTableCell>
             </StyledTableRow>
           ))}
         </TableBody>
